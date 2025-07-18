@@ -1,0 +1,14 @@
+*,
+*::after,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  background: green;
+  max-width: 500px;
+  height: 620px;
+}
