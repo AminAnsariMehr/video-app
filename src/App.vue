@@ -1,11 +1,13 @@
 <script setup>
-import MobileButton from "./components/MobileButton.vue";
 import { RouterView } from "vue-router";
+import MobileButton from "./components/MobileButton.vue";
+import MobileHeader from "./components/MobileHeader.vue";
 </script>
 
 <template>
   <div class="container">
     <div class="mobileFrame">
+      <MobileHeader></MobileHeader>
       <RouterView></RouterView>
     </div>
   </div>
