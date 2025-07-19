@@ -1,21 +1,27 @@
 <script setup>
-import { provide, ref } from 'vue'
-import { RouterView } from 'vue-router'
-
-const movies = ref([
-  { id: '1', num: '1', name: 'a' },
-  { id: '2', num: '2', name: 'b' },
-  { id: '3', num: '3', name: 'c' },
-  { id: '4', num: '4', name: 'd' },
-  { id: '5', num: '5', name: 'e' },
-  { id: '6', num: '6', name: 'f' }
-])
-
-provide('movies', movies.value)
+import MobileButton from "./components/MobileButton.vue";
+import { RouterView } from "vue-router";
 </script>
 
 <template>
   <div class="container">
-    <RouterView></RouterView>
+    <div class="mobileFrame">
+      <RouterView></RouterView>
+    </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.mobileFrame {
+  width: calc(375px + 12px);
+  height: calc(812px + 12px);
+  border-radius: 50px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border: 8px solid #000000;
+}
+</style>

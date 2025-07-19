@@ -1,5 +1,5 @@
 <script setup>
-import NavMenu from './../components/Menu.vue'
+import MenuNavBar from "../components/MenuNavBar.vue";
 </script>
 
 <template>
@@ -7,15 +7,14 @@ import NavMenu from './../components/Menu.vue'
     <div class="view-wrapper">
       <router-view></router-view>
     </div>
-
-    <nav-menu></nav-menu>
+    <menu-nav-bar></menu-nav-bar>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .default-layout {
   width: 100%;
-  background: red;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -24,8 +23,9 @@ import NavMenu from './../components/Menu.vue'
 
   .view-wrapper {
     width: 100%;
-    background: yellow;
-    height: 4000px;
+    height: calc(100% - 81px);
+    overflow-y: scroll;
+    scrollbar-width: none;
   }
 }
 </style>

@@ -1,17 +1,7 @@
-<script setup>
-defineProps({
-  movie: Object
-})
-</script>
+<script setup></script>
 
 <template>
-  <div class="moviesItem">
-    <span>نام : {{ movie.name }}</span>
-    <span>آیدی : {{ movie.id }}</span>
-    <span>شماره : {{ movie.num }}</span>
-
-    <router-link :to="'/movies/view/' + movie.id">برو</router-link>
-  </div>
+  <div class="moviesItem"></div>
 </template>
 
 <style lang="scss" scoped>

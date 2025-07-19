@@ -1,81 +1,80 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: '/',
-      name: 'main',
-      component: () => import('./../layouts/DefaultLayout.vue'),
+      path: "/",
+      name: "app",
+      component: () => import("@/layouts/DefaultLayout.vue"),
       children: [
         {
-          path: 'home',
-          name: 'home',
-          component: () => import('@/views/HomeView.vue')
+          path: "home",
+          name: "home",
+          component: () => import("@/views/HomeView.vue"),
         },
         {
-          path: 'movies',
-          name: 'movies',
-          component: () => import('@/views/movies/MoviesView.vue'),
-          children: [
-            {
-              path: 'view/:id',
-              component: () => import('./../views/movies/MovieItemView.vue')
-            }
-          ]
+          path: "explore",
+          name: "explore",
+          component: () => import("@/views/explore/ExploreView.vue"),
         },
         {
-          path: 'series',
-          name: 'series',
-          component: () => import('@/views/series/SeriesView.vue')
+          path: "post",
+          name: "post",
+          component: () => import("@/views/post/PostView.vue"),
         },
         {
-          path: 'app',
-          name: 'app',
-          component: () => import('@/views/app/AppDownload.vue')
-        }
-      ]
+          path: "likes",
+          name: "likes",
+          component: () => import("@/views/likes/LikesView.vue"),
+        },
+        {
+          path: "profile",
+          name: "profile",
+          component: () => import("@/views/profile/ProfileView.vue"),
+        },
+      ],
     },
 
-    {
-      path: '/auth',
-      name: 'auth',
-      component: () => import('./../layouts/AuthLayout.vue'),
-      children: [
-        {
-          path: 'login',
-          name: 'login',
-          component: () => import('@/views/auth/LoginView.vue')
-        },
-        {
-          path: 'register',
-          name: 'register',
-          component: () => import('@/views/auth/RegisterView.vue')
-        },
-        {
-          path: 'recovery-password',
-          name: 'recovery-password',
-          component: () => import('@/views/auth/RecoveryPasswordView.vue')
-        }
-      ]
-    },
+    // {
+    //   path: "/auth",
+    //   name: "auth",
+    //   component: () => import("./../layouts/AuthLayout.vue"),
+    //   children: [
+    //     {
+    //       path: "login",
+    //       name: "login",
+    //       component: () => import("@/views/auth/LoginView.vue"),
+    //     },
+    //     {
+    //       path: "register",
+    //       name: "register",
+    //       component: () => import("@/views/auth/RegisterView.vue"),
+    //     },
+    //     {
+    //       path: "recovery-password",
+    //       name: "recovery-password",
+    //       component: () => import("@/views/auth/RecoveryPasswordView.vue"),
+    //     },
+    //   ],
+    // },
 
-    {
-      path: '/error',
-      name: 'error',
-      component: () => import('./../layouts/BlankLayout.vue'),
-      children: [
-        {
-          path: '404',
-          name: 'not-found',
-          component: () => import('@/views/errors/NotFoundView.vue')
-        }
-      ]
-    }
+    // {
+    //   path: "/error",
+    //   name: "error",
+    //   component: () => import("./../layouts/BlankLayout.vue"),
+    //   children: [
+    //     {
+    //       path: "404",
+    //       name: "not-found",
+    //       component: () => import("@/views/errors/NotFoundView.vue"),
+    //     },
+    //   ],
+    // },
   ],
 
-  linkActiveClass: 'active',
-  linkExactActiveClass: 'exactActive'
-})
+  linkActiveClass: "active",
+  linkExactActiveClass: "exactActive",
+});
 
-export default router
+export default router;
