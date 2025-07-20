@@ -1,18 +1,18 @@
 <script setup>
 import HomeHeader from "./../components/HomeHeader.vue";
 import StoriesBar from "../components/StoriesBar.vue";
+import ShakaPlayer from "../components/ShakaPlayer.vue";
 </script>
 
 <template>
   <div class="homeView">
     <HomeHeader></HomeHeader>
     <StoriesBar></StoriesBar>
-
-    homeview page
+    <ShakaPlayer></ShakaPlayer>
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .homeView {
   width: 100%;
   height: 100%;

@@ -1,5 +1,7 @@
 @use "./fonts";
 
+@use "./../../icons/fontAwsome/all.css";
+
 *,
 *::after,
 *::after {
@@ -8,10 +10,17 @@
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 .container {
   width: 100vw;
   padding: 1.5rem;
-  font-family: "SF Pro Text";
+  // font-family: "SF Pro Text";
   display: flex;
   justify-content: center;
   align-items: flex-start;
